@@ -38,7 +38,7 @@ function sendMessage(isEnabled){
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendRespons)
 {
-    document.body.innerHTML += request.data;
+    document.body.innerHTML = request.data;
 
     var svg = document.querySelector('svg');
     svg.setAttribute('id', "icon_" + randomizeString());
