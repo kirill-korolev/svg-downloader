@@ -10,7 +10,6 @@ svg.addEventListener("click", function(){
 
 });
 
-
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
     if(message.isEnabled){
       isEnabled = true;
@@ -19,8 +18,3 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
       isEnabled = false;
     }
 });
-
-function Object(path, fill){
-    this.path = path;
-    this.fill = fill;
-}

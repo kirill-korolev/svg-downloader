@@ -18,7 +18,7 @@
 
   "content_scripts": [{
      "matches": ["*://*.icons8.com/*"],
-     "js": ["jquery-3.1.1.min.js", "content_script.js"]
+     "js": ["content_script.js"]
    }],
 
   "permissions":[
