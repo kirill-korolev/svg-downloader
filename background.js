@@ -50,13 +50,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendRespons)
 });
 
 function randomizeString(){
-    var result = "";
-
-    for(i = 0; i < 6; i++){
-        result += getRandom(0, 9).toString();
-    }
-
-    return result;
+    return getRandom(0, 999999).toString();
 }
 
 function getRandom(min,max){
