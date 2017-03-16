@@ -1,0 +1,34 @@
+{
+  "manifest_version":2,
+
+  "name":"EZSVG",
+  "version":"1.0",
+
+  "icons":{
+    "16":"icon16.png",
+    "32":"icon32.png",
+    "48":"icon48.png",
+    "128":"icon128.png"
+  },
+
+  "background":{
+    "page":"background.html",
+    "persistent":false
+  },
+
+  "content_scripts": [{
+     "matches": ["*://*.icons8.com/*"],
+     "js": ["jquery-3.1.1.min.js", "content_script.js"]
+   }],
+
+  "permissions":[
+    "tabs",
+    "activeTab"
+  ],
+
+  "browser_action":{
+      "default_title": "Press to activate",
+      "default_icon": "icon48.png"
+  },
+  "content_security_policy": "script-src 'self' https://nytimes.github.io/svg-crowbar/svg-crowbar.js; object-src 'self'"
+}
